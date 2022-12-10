@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2022 by SalmY001 (http://jsbin.com/yiyuroy/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<body>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <h1 class="fadeOutTag">Header 1</h1>
+  <h2 class="fadeOutTag">Header 2</h2>
+  <p>Hello</p>
+  <p>How are you doing today?</p>
+  
+  <button id="button1">Hide</button> <!--id is used for 1 html tag-->
+  <button id="otherButton">Show</button> <!--id is used for 1 html tag-->
+  
+  <script> // run javscript in html
+    $(document).ready(function(){
+  // HTML object. action (user action double click button 1 only)
+  $("#button1").click(function(){ //can also use .mouseenter(function() / .mouseleave(function()
+    //run code when button clicked 
+    $(".fadeOutTag").hide();
+  });
+  $("#otherButton").click(function(){
+     $(".fadeOutTag").show();
+  })
+});
+    
+  </script>
+    
+    
+</body>
+</html>
