@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2022 by SalmY001 (http://jsbin.com/dayidaq/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<body>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  
+   <button id="button1">Slide</button> <!--id is used for 1 html tag-->
+   <button id="button2">Slide Back</button> <!--id is used for 1 html tag-->
+   <button id="button3">Grow</button> <!--id is used for 1 html tag-->
+   <button id="button4">Shrink</button> <!--id is used for 1 html tag-->
+  
+  <div style="background:orange; height:100px; width:100px; position:absolute;"></div>
+ 
+
+      
+<script id="jsbin-javascript">
+$(document).ready(function(){
+  $("#button1").click(function(){
+    $("div").animate({left:"100px"}, "slow");
+  }); 
+  $("#button2").click(function(){
+    $("div").animate({left:"0"}, "fast");
+  }); 
+  $("#button3").click(function(){
+    $("div").animate({
+      height:"+=20px",
+      width:"+=20px"   
+    });
+  });
+  $("#button4").click(function(){
+    $("div").animate({
+      height:"-=10px",
+      width:"-=10px"   
+    });
+  });
+});
+</script>
+</body>
+</html>
